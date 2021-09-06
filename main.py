@@ -1,4 +1,10 @@
-# The purpose is to convert rgb notation to hex.
-# User will provide RGB notation and program will then calculate and return correct hexadecimal color notation.
-# Notation will be full 6 symbols, not short version of 3
-# If user will input invalid numbers (eg over 255), program will change those to 255 or 0 respectively.
+# 0. Check if the number is greater than 16
+    # if True:
+        # 1. Divide the decimal number by 16 using modulo operator
+            # 1.1. Store the value in a list
+        # 2. Divide the decimal again using floor division
+            # 2.1. Take the result and check against step 0
+    # if False:
+        # 1. Store in a list
+        # 2. Convert list elements into String and present the outcome
+
