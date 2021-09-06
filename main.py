@@ -8,3 +8,16 @@
         # 1. Store in a list
         # 2. Convert list elements into String and present the outcome
 
+def sanity_check(color):
+    if color > 255:
+        return 255
+    elif color < 0:
+        return 0
+    else:
+        return color
+
+
+if __name__ == '__main__':
+    r_color = int(input('Please provide R color: '))
+    g_color = int(input('Please provide G color: '))
+    b_color = int(input('Please provide B color: '))
