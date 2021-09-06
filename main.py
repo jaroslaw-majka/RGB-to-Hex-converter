@@ -29,16 +29,22 @@ def rgb_input() -> Tuple[int, int, int]:
 def hex_list_builder(rgb_colors):
     hex_container = '0123456789ABCDEF'
     hex_list = []
-    # TODO Transform below code into recurrence function.
     for color in rgb_colors:
         if color > 15:
+            # TODO Symbols are in wrong order.
             while color != 0:
                 hex_list.append(hex_container[color % 16])
                 color = color // 16
+        elif color < 10:
+            hex_list.append('0' + hex_container[color])
         else:
             hex_list.append(hex_container[color])
-    print(hex_list)
+    return hex_list
+
+
+def output_formatter():
+    return ''.join([i for i in hex_list_builder(rgb_input())])
 
 
 if __name__ == '__main__':
-    hex_list_builder(rgb_input())
+    print(output_formatter())
